@@ -1,0 +1,898 @@
+/* ========================================================= 
+   RESET 
+========================================================= */ 
+ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+html, 
+body { 
+    width: 100%; 
+    min-height: 100%; 
+} 
+ 
+body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    background: #f4f6f9; 
+    color: #374151; 
+    font-size: 14px; 
+    line-height: 1.5; 
+} 
+ 
+ 
+/* ========================================================= 
+   WRAPPER 
+========================================================= */ 
+ 
+.wrapper { 
+    display: flex; 
+    min-height: 100vh; 
+} 
+ 
+ 
+/* ========================================================= 
+   SIDEBAR 
+========================================================= */ 
+ 
+.sidebar { 
+    width: 230px; 
+    min-height: 100vh; 
+    background: #1f2937; 
+    padding: 20px 15px; 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    bottom: 0; 
+    z-index: 100; 
+} 
+ 
+.sidebar .logo { 
+    text-align: center; 
+    margin-bottom: 25px; 
+    padding-bottom: 20px; 
+    border-bottom: 1px solid #374151; 
+} 
+ 
+.sidebar .logo h2 { 
+    color: #ffffff; 
+    font-size: 20px; 
+    font-weight: 600; 
+    margin-bottom: 4px; 
+} 
+ 
+.sidebar .logo p { 
+    color: #cbd5e1; 
+    font-size: 13px; 
+} 
+ 
+.sidebar a { 
+    display: block; 
+    width: 100%; 
+    padding: 10px 14px; 
+    margin-bottom: 5px; 
+    border-radius: 6px; 
+    text-decoration: none; 
+    color: #e5e7eb; 
+    font-size: 14px; 
+    transition: background 0.2s ease; 
+} 
+ 
+.sidebar a:hover { 
+    background: #374151; 
+    color: #ffffff; 
+} 
+ 
+.sidebar a.logout { 
+    margin-top: 25px; 
+    background: #dc2626; 
+    color: #ffffff; 
+    text-align: center; 
+} 
+ 
+.sidebar a.logout:hover { 
+    background: #b91c1c; 
+} 
+ 
+ 
+/* ========================================================= 
+   CONTENT 
+========================================================= */ 
+ 
+.content { 
+    margin-left: 230px; 
+    width: calc(100% - 230px); 
+    min-height: 100vh; 
+    padding: 25px; 
+} 
+ 
+ 
+/* ========================================================= 
+   HEADER 
+========================================================= */ 
+ 
+.header { 
+    width: 100%; 
+    background: #ffffff; 
+    padding: 22px 25px; 
+    margin-bottom: 22px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+} 
+ 
+.header h1 { 
+    color: #1f2937; 
+    font-size: 24px; 
+    font-weight: 600; 
+    margin-bottom: 4px; 
+} 
+ 
+.header p { 
+    color: #6b7280; 
+    font-size: 14px; 
+} 
+ 
+ 
+/* ========================================================= 
+   TABLE WRAPPER 
+========================================================= */ 
+ 
+.table-wrapper { 
+    width: 100%; 
+    background: #ffffff; 
+    border-radius: 10px; 
+    overflow-x: auto; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+} 
+ 
+ 
+/* ========================================================= 
+   TABLE 
+========================================================= */ 
+ 
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: #ffffff; 
+} 
+ 
+table th { 
+    padding: 13px 14px; 
+    background: #f8fafc; 
+    color: #374151; 
+    font-size: 14px; 
+    font-weight: 600; 
+    text-align: left; 
+    border-bottom: 2px solid #e5e7eb; 
+    white-space: nowrap; 
+} 
+ 
+table td { 
+    padding: 13px 14px; 
+    color: #374151; 
+    font-size: 14px; 
+    vertical-align: middle; 
+    border-bottom: 1px solid #e5e7eb; 
+} 
+ 
+table tr:last-child td { 
+    border-bottom: none; 
+} 
+ 
+table tr:hover td { 
+    background: #f9fafb; 
+} 
+ 
+ 
+/* ========================================================= 
+   KOLOM AKSI 
+========================================================= */ 
+ 
+table th:last-child, 
+table td:last-child { 
+    text-align: center; 
+    white-space: nowrap; 
+} 
+ 
+ 
+/* ========================================================= 
+   DETAIL PEMBELIAN 
+========================================================= */ 
+ 
+table td div { 
+    line-height: 1.6; 
+    margin-bottom: 3px; 
+} 
+ 
+table td div:last-child { 
+    margin-bottom: 0; 
+} 
+ 
+ 
+/* ========================================================= 
+   TOMBOL HAPUS 
+========================================================= */ 
+ 
+.btn-hapus { 
+    display: inline-block; 
+    min-width: 65px; 
+    padding: 8px 14px; 
+ 
+    background: #dc2626; 
+    color: #ffffff !important; 
+ 
+    border: none; 
+    border-radius: 5px; 
+ 
+    text-decoration: none; 
+    text-align: center; 
+ 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px; 
+    font-weight: 500; 
+ 
+    cursor: pointer; 
+    transition: background 0.2s ease; 
+} 
+ 
+.btn-hapus:hover { 
+    background: #b91c1c; 
+    color: #ffffff !important; 
+    text-decoration: none; 
+} 
+ 
+ 
+/* ========================================================= 
+   TOMBOL EDIT 
+========================================================= */ 
+ 
+.btn-edit { 
+    display: inline-block; 
+    padding: 7px 13px; 
+ 
+    background: #2563eb; 
+    color: #ffffff !important; 
+ 
+    border-radius: 5px; 
+ 
+    text-decoration: none; 
+    text-align: center; 
+ 
+    font-size: 14px; 
+    font-weight: 500; 
+ 
+    transition: background 0.2s ease; 
+} 
+ 
+.btn-edit:hover { 
+    background: #1d4ed8; 
+    text-decoration: none; 
+} 
+ 
+ 
+/* ========================================================= 
+   FORM UMUM 
+========================================================= */ 
+ 
+form { 
+    background: #ffffff; 
+    padding: 22px; 
+    margin-bottom: 22px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+} 
+ 
+form label { 
+    display: block; 
+    margin-bottom: 6px; 
+    color: #374151; 
+    font-size: 14px; 
+    font-weight: 600; 
+} 
+ 
+input, 
+select, 
+textarea { 
+    width: 100%; 
+    padding: 10px 12px; 
+    margin-bottom: 15px; 
+ 
+    border: 1px solid #d1d5db; 
+    border-radius: 6px; 
+ 
+    outline: none; 
+    background: #ffffff; 
+ 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px; 
+    color: #374151; 
+} 
+ 
+input:focus, 
+select:focus, 
+textarea:focus { 
+    border-color: #2563eb; 
+} 
+ 
+textarea { 
+    min-height: 90px; 
+    resize: vertical; 
+} 
+ 
+ 
+/* ========================================================= 
+   TOMBOL UMUM 
+========================================================= */ 
+ 
+button, 
+.btn, 
+.btn-tambah, 
+.btn-simpan { 
+    display: inline-block; 
+ 
+    padding: 9px 15px; 
+ 
+    border: none; 
+    border-radius: 6px; 
+ 
+    background: #374151; 
+    color: #ffffff; 
+ 
+    text-decoration: none; 
+ 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px; 
+    font-weight: 500; 
+ 
+    cursor: pointer; 
+    transition: background 0.2s ease; 
+} 
+ 
+button:hover, 
+.btn:hover, 
+.btn-tambah:hover, 
+.btn-simpan:hover { 
+    background: #1f2937; 
+} 
+ 
+ 
+/* ========================================================= 
+   DASHBOARD CARD 
+========================================================= */ 
+ 
+.card-container, 
+.cards, 
+.dashboard-cards { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 18px; 
+    margin-bottom: 25px; 
+} 
+ 
+.card { 
+    background: #ffffff; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+} 
+ 
+.card h3 { 
+    color: #6b7280; 
+    font-size: 14px; 
+    font-weight: 500; 
+    margin-bottom: 8px; 
+} 
+ 
+.card p { 
+    color: #1f2937; 
+    font-size: 24px; 
+    font-weight: 600; 
+} 
+ 
+.card .angka { 
+    font-size: 24px; 
+} 
+ 
+ 
+/* ========================================================= 
+   LOGIN 
+========================================================= */ 
+ 
+.login-container { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+ 
+    width: 100%; 
+    height: 100vh; 
+ 
+    display: flex !important; 
+    justify-content: center !important; 
+    align-items: center !important; 
+ 
+    padding: 20px; 
+ 
+    background: #f4f6f9; 
+ 
+    z-index: 999; 
+} 
+ 
+.login-box { 
+    width: 380px; 
+    max-width: 100%; 
+ 
+    margin: 0 !important; 
+    padding: 30px; 
+ 
+    background: #ffffff; 
+ 
+    border-radius: 10px; 
+ 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+} 
+ 
+.login-box h1, 
+.login-box h2 { 
+    margin-bottom: 8px; 
+ 
+    color: #1f2937; 
+ 
+    text-align: center; 
+ 
+    font-size: 24px; 
+    font-weight: 600; 
+} 
+ 
+.login-box p { 
+    margin-bottom: 25px; 
+ 
+    color: #6b7280; 
+ 
+    text-align: center; 
+ 
+    font-size: 14px; 
+} 
+ 
+.login-box form { 
+    margin: 0; 
+    padding: 0; 
+ 
+    background: transparent; 
+ 
+    box-shadow: none; 
+} 
+ 
+.login-box form label { 
+    display: block; 
+ 
+    margin-bottom: 6px; 
+ 
+    color: #374151; 
+ 
+    text-align: left; 
+ 
+    font-size: 14px; 
+    font-weight: 600; 
+} 
+ 
+.login-box form input, 
+.login-box form select { 
+    width: 100%; 
+    margin-bottom: 15px; 
+    font-size: 14px; 
+} 
+ 
+.login-box button { 
+    display: block; 
+ 
+    width: 100%; 
+ 
+    margin-top: 5px; 
+    padding: 10px 15px; 
+ 
+    border: none; 
+    border-radius: 6px; 
+ 
+    background: #2563eb; 
+    color: #ffffff; 
+ 
+    text-align: center; 
+ 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px; 
+    font-weight: 600; 
+ 
+    cursor: pointer; 
+ 
+    transition: background 0.2s ease; 
+} 
+ 
+.login-box button:hover { 
+    background: #1d4ed8; 
+} 
+ 
+ 
+/* ========================================================= 
+   JIKA LOGIN-BOX TIDAK DIBUNGKUS LOGIN-CONTAINER 
+========================================================= */ 
+ 
+body:has(.login-box) { 
+    margin: 0; 
+    min-height: 100vh; 
+} 
+ 
+body:has(.login-box) .login-box { 
+    position: fixed; 
+ 
+    top: 50%; 
+    left: 50%; 
+ 
+    transform: translate(-50%, -50%); 
+ 
+    z-index: 1000; 
+} 
+ 
+ 
+/* ========================================================= 
+   ALERT / PESAN 
+========================================================= */ 
+ 
+.alert { 
+    padding: 12px 15px; 
+    margin-bottom: 15px; 
+ 
+    background: #fef2f2; 
+    color: #b91c1c; 
+ 
+    border: 1px solid #fecaca; 
+    border-radius: 6px; 
+ 
+    font-size: 14px; 
+} 
+ 
+ 
+/* ========================================================= 
+   ACTION 
+========================================================= */ 
+ 
+.action { 
+    margin-bottom: 20px; 
+} 
+ 
+.action a { 
+    text-decoration: none; 
+} 
+ 
+ 
+/* ========================================================= 
+   STATUS 
+========================================================= */ 
+ 
+.status { 
+    display: inline-block; 
+ 
+    padding: 5px 9px; 
+ 
+    border-radius: 5px; 
+ 
+    font-size: 12px; 
+    font-weight: 600; 
+} 
+ 
+ 
+/* ========================================================= 
+   FIX POSISI TOMBOL LIHAT LAPORAN 
+========================================================= */ 
+ 
+form:has(input[type="date"]) button { 
+    position: relative !important; 
+    top: -19px !important; 
+    margin-top: 0 !important; 
+    margin-bottom: 0 !important; 
+    vertical-align: top !important; 
+} 
+ 
+ 
+/* ========================================================= 
+   PERBAIKAN WARNA TOMBOL HAPUS 
+========================================================= */ 
+ 
+.btn.btn-hapus { 
+    background: #dc2626 !important; 
+    color: #ffffff !important; 
+    border: none !important; 
+    font-size: 14px !important; 
+} 
+ 
+.btn.btn-hapus:hover { 
+    background: #b91c1c !important; 
+    color: #ffffff !important; 
+} 
+ 
+ 
+/* ========================================================= 
+   PERBAIKAN WARNA TOMBOL SIMPAN 
+========================================================= */ 
+ 
+.btn.btn-primary { 
+    background: #2563eb !important; 
+    color: #ffffff !important; 
+    border: none !important; 
+    font-size: 14px !important; 
+} 
+ 
+.btn.btn-primary:hover { 
+    background: #1d4ed8 !important; 
+    color: #ffffff !important; 
+} 
+ 
+ 
+/* ========================================================= 
+   TOMBOL INVOICE 
+========================================================= */ 
+ 
+a.btn.btn-invoice { 
+    background: #f59e0b !important; 
+    color: #ffffff !important; 
+    border: none !important; 
+} 
+ 
+a.btn.btn-invoice:hover { 
+    background: #d97706 !important; 
+    color: #ffffff !important; 
+} 
+ 
+ 
+/* ========================================================= 
+   TOMBOL TAMBAH PRODUK - BIRU 
+========================================================= */ 
+ 
+.btn-tambah-produk { 
+    background: #2563eb !important; 
+    color: #ffffff !important; 
+    border: 1px solid #2563eb !important; 
+ 
+    padding: 10px 16px !important; 
+    border-radius: 6px !important; 
+ 
+    cursor: pointer; 
+ 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px !important; 
+    font-weight: 500; 
+} 
+ 
+.btn-tambah-produk:hover { 
+    background: #1d4ed8 !important; 
+    border-color: #1d4ed8 !important; 
+    color: #ffffff !important; 
+} 
+ 
+ 
+/* ========================================================= 
+   TOMBOL X HAPUS PRODUK 
+========================================================= */ 
+ 
+.produk-row { 
+    display: grid; 
+    grid-template-columns: 1fr 180px 45px; 
+    gap: 12px; 
+    align-items: center !important; 
+} 
+ 
+.btn-hapus-produk { 
+    width: 40px !important; 
+    height: 40px !important; 
+ 
+    padding: 0 !important; 
+    margin: 0 !important; 
+ 
+    display: flex !important; 
+    align-items: center !important; 
+    justify-content: center !important; 
+ 
+    position: relative !important; 
+    top: -6px !important; 
+ 
+    background: #fee2e2 !important; 
+    color: #dc2626 !important; 
+ 
+    border: none !important; 
+    border-radius: 6px !important; 
+ 
+    cursor: pointer; 
+ 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 18px !important; 
+    line-height: 1 !important; 
+} 
+ 
+.btn-hapus-produk:hover { 
+    background: #fecaca !important; 
+    color: #dc2626 !important; 
+} 
+ 
+ 
+/* ========================================================= 
+   RESPONSIVE - TABLET 
+========================================================= */ 
+ 
+@media (max-width: 1000px) { 
+ 
+    .card-container, 
+    .cards, 
+    .dashboard-cards { 
+        grid-template-columns: repeat(2, 1fr); 
+    } 
+ 
+} 
+ 
+ 
+/* ========================================================= 
+   RESPONSIVE - MOBILE 
+========================================================= */ 
+ 
+@media (max-width: 700px) { 
+ 
+    .sidebar { 
+        width: 190px; 
+    } 
+ 
+    .content { 
+        width: calc(100% - 190px); 
+        margin-left: 190px; 
+        padding: 15px; 
+    } 
+ 
+    .card-container, 
+    .cards, 
+    .dashboard-cards { 
+        grid-template-columns: 1fr; 
+    } 
+ 
+    .header h1 { 
+        font-size: 21px; 
+    } 
+ 
+} 
+ 
+ 
+/* ========================================================= 
+   RESPONSIVE - HP 
+========================================================= */ 
+ 
+@media (max-width: 500px) { 
+ 
+    .sidebar { 
+        position: relative; 
+ 
+        width: 100%; 
+        min-height: auto; 
+    } 
+ 
+    .wrapper { 
+        display: block; 
+    } 
+ 
+    .content { 
+        width: 100%; 
+        margin-left: 0; 
+    } 
+ 
+    .login-box { 
+        width: calc(100% - 30px); 
+        padding: 25px; 
+    } 
+ 
+} 
+
+
+/* =========================================================
+   FIX TOMBOL LAPORAN
+   KHUSUS .laporan-form
+   KODE SEBELUMNYA TETAP
+========================================================= */
+
+.laporan-form {
+    display: flex !important;
+    align-items: flex-end !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+}
+
+.laporan-form > div {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.laporan-form > div label {
+    display: block !important;
+    margin-bottom: 6px !important;
+}
+
+.laporan-form > div input[type="date"] {
+    width: auto !important;
+    height: 38px !important;
+    margin: 0 !important;
+    padding: 9px 12px !important;
+    box-sizing: border-box !important;
+}
+
+.laporan-form > .btn-laporan,
+.laporan-form > .btn-hapus {
+    width: 150px !important;
+    min-width: 150px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+
+    margin: 0 !important;
+    padding: 0 16px !important;
+
+    box-sizing: border-box !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    align-self: flex-end !important;
+
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+
+    border-radius: 6px !important;
+
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: normal !important;
+}
+
+.laporan-form > .btn-laporan {
+    background: #007bff !important;
+    color: #ffffff !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.laporan-form > .btn-hapus {
+    background: #dc3545 !important;
+    color: #ffffff !important;
+    border: none !important;
+    text-decoration: none !important;
+}
+
+.laporan-form > .btn-laporan:hover {
+    background: #0056b3 !important;
+}
+
+.laporan-form > .btn-hapus:hover {
+    background: #b02a37 !important;
+}
+
+
+/* =========================================================
+   MOBILE - TOMBOL LAPORAN
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .laporan-form {
+        align-items: flex-end !important;
+    }
+
+    .laporan-form > .btn-laporan,
+    .laporan-form > .btn-hapus {
+        width: 150px !important;
+        min-width: 150px !important;
+    }
+
+}
+
+
+       
+
+        
